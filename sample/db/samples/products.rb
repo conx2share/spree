@@ -6,7 +6,8 @@ shipping_category = Spree::ShippingCategory.find_by_name!("Default")
 
 default_attrs = {
   :description => Faker::Lorem.paragraph,
-  :available_on => Time.zone.now
+  :available_on => Time.zone.now,
+  :store_ids => [Spree::Store.find_by_name("Default")]
 }
 
 products = [
